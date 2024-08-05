@@ -26,7 +26,7 @@ def performASR(filename, numSpeakers):
     result = whisperx.align(result["segments"], model_a, metadata, audio, device, return_char_alignments=False)
 
     # audio diarization
-    diarize_model = whisperx.DiarizationPipeline(use_auth_token="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", device=device)
+    diarize_model = whisperx.DiarizationPipeline(use_auth_token="auth_token", device=device)
     diarize_segments = diarize_model(audio, num_speakers=numSpeakers)
     # print(diarize_segments.speaker.unique())
 
