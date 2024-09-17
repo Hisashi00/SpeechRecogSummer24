@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Audio Transcription</title>
+    </head>
+    <body>
+        <h1>Audio Transcription</h1>
+        {% for x in transcript %}
+            <p>{{ x }}<br><br></p>
+        {% endfor %}
+        <a href="/">Home</a>
+        <a href="{{ url_for('summarization') }}">Summary</a>
+    </body>
+</html>
